@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 
 import { ModeToggle } from '@/components/common/mode-toggle'
 import { NavigationAction } from '@/components/common/navigation/navigation-action'
+import NavigationItem from '@/components/common/navigation/navigation-item'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { currentProfile } from '@/lib/current-profile'
@@ -26,11 +27,11 @@ async function NavigationSidebar() {
 			<NavigationAction />
 			<Separator className="h-[2px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-10 mx-auto" />
 			<ScrollArea className="flex-1 w-full">
-				{/* {servers.map((server) => (
+				{servers.map((server) => (
 					<div key={server.id} className="mb-4">
 						<NavigationItem id={server.id} imageUrl={server.imageUrl} name={server.name} />
 					</div>
-				))} */}
+				))}
 			</ScrollArea>
 
 			<div className="pb-3 mt-auto flex items-center flex-col gap-y-4">
